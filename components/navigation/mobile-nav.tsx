@@ -11,12 +11,11 @@ import {
 } from "@/components/ui/sheet";
 import { motion } from "motion/react";
 import { Button } from "../ui/button";
-import Link from "next/link";
 
 export default function MobileNav() {
   return (
     <div className="p-4 flex sm:hidden justify-between items-center shadow-sm bg-[#1A1D23] text-[#F5F7FA]">
-      <h1 className="text-xl font-semibold">My App</h1>
+      <h1 className="text-xl font-semibold uppercase">Sandip</h1>
 
       <Sheet>
         <SheetTrigger asChild>
@@ -50,39 +49,39 @@ export default function MobileNav() {
 
             <nav className="flex flex-col space-y-2 text-[16px] font-semibold">
               <SheetClose asChild>
-                <Link
+                <a
                   href="#home"
                   className="uppercase hover:text-gray-600 transition"
                 >
                   Home
-                </Link>
+                </a>
               </SheetClose>
 
               <SheetClose asChild>
-                <Link
+                <a
                   href="#about"
                   className="uppercase hover:text-gray-600 transition"
                 >
-                  About
-                </Link>
+                  about
+                </a>
               </SheetClose>
 
               <SheetClose asChild>
-                <Link
-                  href="#service"
+                <a
+                  href="#experience"
                   className="uppercase hover:text-gray-600 transition"
                 >
-                  Services
-                </Link>
+                  experiences
+                </a>
               </SheetClose>
 
               <SheetClose asChild>
-                <Link
+                <a
                   href="#contact"
                   className="uppercase hover:text-gray-600 transition"
                 >
-                  Contact
-                </Link>
+                  contact
+                </a>
               </SheetClose>
             </nav>
           </motion.div>

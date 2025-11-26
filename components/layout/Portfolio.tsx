@@ -1,5 +1,36 @@
 import Image from "next/image";
 
+const projects = [
+  {
+    id: 1,
+    title: "Food & Delivery Web App",
+    description:
+      "A modern food ordering platform with real-time tracking and a clean, intuitive interface.",
+    image: "/images/project1.jpg",
+  },
+  {
+    id: 2,
+    title: "Blood Donation Web App",
+    description:
+      "A community-focused platform connecting donors and recipients with smart matching tools.",
+    image: "/images/project2.jpg",
+  },
+  {
+    id: 3,
+    title: "Furniture Web App",
+    description:
+      "A stylish product browsing experience with rich visuals and responsive layouts.",
+    image: "/images/project3.jpg",
+  },
+  {
+    id: 4,
+    title: "Hardware Web App",
+    description:
+      "A modern hardware showcase featuring product exploration and clean UI design.",
+    image: "/images/project4.jpg",
+  },
+];
+
 const Portfolio = () => {
   return (
     <div
@@ -26,54 +57,25 @@ const Portfolio = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Project 1 */}
-          <div className="overflow-hidden rounded-xl shadow-lg bg-white/10 backdrop-blur-md border border-white/20">
-            <Image
-              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800"
-              className="w-full h-56 object-cover hover:scale-105 transition duration-500"
-              alt="project1"
-              width={48}
-              height={48}
-            />
-            <div className="p-4 text-white">
-              <h3 className="text-xl font-semibold">Project One</h3>
-              <p className="text-gray-300 text-sm">A modern clean UI design</p>
-            </div>
-          </div>
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="overflow-hidden rounded-xl shadow-lg bg-white/10 backdrop-blur-md border border-white/20"
+            >
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={600}
+                height={400}
+                className="w-full h-56 object-cover hover:scale-105 transition duration-500"
+              />
 
-          {/* Project 2 */}
-          <div className="overflow-hidden rounded-xl shadow-lg bg-white/10 backdrop-blur-md border border-white/20">
-            <Image
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
-              className="w-full h-56 object-cover hover:scale-105 transition duration-500"
-              alt="project2"
-              width={48}
-              height={48}
-            />
-            <div className="p-4 text-white">
-              <h3 className="text-xl font-semibold">Project Two</h3>
-              <p className="text-gray-300 text-sm">
-                Full‑stack responsive website
-              </p>
+              <div className="p-4 text-white">
+                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <p className="text-gray-300 text-sm">{project.description}</p>
+              </div>
             </div>
-          </div>
-
-          {/* Project 3 */}
-          <div className="overflow-hidden rounded-xl shadow-lg bg-white/10 backdrop-blur-md border border-white/20">
-            <Image
-              src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800"
-              className="w-full h-56 object-cover hover:scale-105 transition duration-500"
-              alt="project3"
-              width={48}
-              height={48}
-            />
-            <div className="p-4 text-white">
-              <h3 className="text-xl font-semibold">Project Three</h3>
-              <p className="text-gray-300 text-sm">
-                Creative portfolio showcase
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

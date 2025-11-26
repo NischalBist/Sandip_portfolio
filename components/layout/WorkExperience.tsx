@@ -33,8 +33,7 @@ export default function WorkExperience() {
       id="experience"
       className="relative w-full min-h-[150vh] py-20 px-4 bg-cover bg-center"
       style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=764&auto=format&fit=crop')",
+        backgroundImage: "url('/images/background2.jpg')",
       }}
     >
       {/* Overlay */}
@@ -80,8 +79,8 @@ export default function WorkExperience() {
                   {/* Dot */}
                   <div
                     className={`
-                      absolute w-5 h-5 bg-white border-2 border-gray-700 rounded-full z-20 
-                      left-[23px] lg:left-1/2 -translate-x-1/2 top-2
+                      mt-24 absolute w-5 h-5 bg-white border-2 border-gray-700 rounded-full z-20 
+                      left-[25px] lg:left-1/2 -translate-x-1/2 top-2
                     `}
                   ></div>
 
@@ -111,9 +110,9 @@ export default function WorkExperience() {
       </div>
 
       {/* Floating Contact Card (between two sections like your Sandip example) */}
-      <div id="contact" className="min-h-screen">
+      <div id="contact" className="h-[160vh] lg:h-screen">
         {/* Floating Contact Card Between Sections */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-1/2 z-50 bg-white/90 backdrop-blur-xl shadow-2xl rounded-3xl w-[95%] sm:w-[85%] lg:w-[70%] p-6 sm:p-10">
+        <div className="absolute top-1/3 lg:top-1/2 left-1/2 -translate-x-1/2 translate-y-1/2 z-50 bg-white/90 backdrop-blur-xl shadow-2xl rounded-3xl w-[95%] sm:w-[85%] lg:w-[70%] p-6 sm:p-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {/* LEFT SIDE — MESSAGE + INFO + SOCIALS */}
             <div className="flex flex-col justify-between">
@@ -123,20 +122,22 @@ export default function WorkExperience() {
                 </h3>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  I&apos;m a paragraph. Click here to add your own text and edit
-                  me. I&apos;m a great place for you to tell a story and let
-                  your users know a little more about you.
+                  I&apos;d love to hear from you. Whether you&apos;re planning a
+                  new project, looking for a collaborator, or just want to say
+                  hello, feel free to reach out.
                 </p>
 
-                <p className="text-gray-800 mb-1">info@mysite.com</p>
-                <p className="text-gray-800">Tel: 1-800-000-0000</p>
+                <p className="text-gray-800 mb-1">
+                  E-mail: sandipchhetri2071@gmail.com
+                </p>
+                <p className="text-gray-800">Phone: +977 9865212346</p>
               </div>
 
               {/* Social icons */}
               <div className="flex items-center space-x-4 mt-10">
                 <a
                   className="text-gray-700 hover:text-black transition"
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/sandip-shakhi-chhetri-9276a12b2/"
                   target="_blank"
                 >
                   <Linkedin className="w-6 h-6" />
@@ -160,7 +161,7 @@ export default function WorkExperience() {
 
                 <a
                   className="text-gray-700 hover:text-black transition"
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/sandip.chhetri.995704"
                   target="_blank"
                 >
                   <Facebook className="w-6 h-6" />
